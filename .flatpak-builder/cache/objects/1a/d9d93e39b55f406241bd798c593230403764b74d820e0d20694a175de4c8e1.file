@@ -1,0 +1,13 @@
+[Application]
+name=org.github.riftr.flatpak-python-template
+runtime=org.gnome.Platform/x86_64/45
+sdk=org.gnome.Sdk/x86_64/45
+command=run.sh
+
+[Extension org.github.riftr.flatpak_python_template.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=org.github.riftr.flatpak_python_template.Debug;

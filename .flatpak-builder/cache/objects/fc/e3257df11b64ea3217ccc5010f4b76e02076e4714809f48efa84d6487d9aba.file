@@ -1,0 +1,5 @@
+[Runtime]
+name=org.github.riftr.flatpak_python_template.Debug
+
+[ExtensionOf]
+ref=app/org.github.riftr.flatpak-python-template/x86_64/master
