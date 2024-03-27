@@ -21,7 +21,11 @@ def run_application():
         return None
 
 
-if __name__ == "__main__":
+def main():
     run_application()
     input(col.Fore.MAGENTA + "Press any key to exit...")
     print(col.Style.RESET_ALL)
+
+
+if __name__ == "__main__":
+    main()
