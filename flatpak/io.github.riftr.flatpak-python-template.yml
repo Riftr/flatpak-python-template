@@ -34,8 +34,8 @@ modules:
       #- pip3 install --prefix=/app .
       - install -D run.sh /app/bin/run.sh
       - install -D __init__.py /app/my_sample_app/myapp.py
-      - mkdir /app/my_sample_app/resources
-      - install -D * /app/my_sample_app/resources/
+      - mkdir /app/my_sample_app/resources/
+      - cp -R resources/* /app/my_sample_app/resources
     #sources:
     #  - type: git
     #    url: https://github.com/Riftr/flatpak-python-template.git
@@ -45,7 +45,8 @@ modules:
         path: ../my_sample_app/__init__.py
       - type: file
         path: ../run.sh
-        # this just dumps everything at . which we don't want. works tho for this simple app.
+        # the dest: tag lets us copy it as a directory
       - type: dir
         path: ../my_sample_app/resources/
+        dest: resources
 
