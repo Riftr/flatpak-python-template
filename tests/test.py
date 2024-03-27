@@ -1,11 +1,11 @@
 import unittest
-import sampleapp
+import my_sample_app
 
 
 class TestApp(unittest.TestCase):
 
     def test_run_application(self):
-        data = sampleapp.run_application()
+        data = my_sample_app.run_application()
         self.assertEqual(data, "PNG")
 
 

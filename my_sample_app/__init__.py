@@ -9,12 +9,12 @@ def run_application():
     img_path = local_path + "/resources/python-logo.png"
 
     if os.path.exists(img_path):
-        im = Image.open(img_path)
-        print(col.Fore.GREEN + "This is just a sample project running successfully")
-        print(col.Fore.GREEN + "The python-logo.png file had the following properties:")
-        print(col.Fore.CYAN + im.format, im.size, im.mode)
-        print(col.Style.RESET_ALL)
-        return im.format
+        with Image.open(img_path) as im:
+            print(col.Fore.GREEN + "This is just a sample project running successfully")
+            print(col.Fore.GREEN + "The python-logo.png file had the following properties:")
+            print(col.Fore.CYAN + im.format, im.size, im.mode)
+            print(col.Style.RESET_ALL)
+            return im.format
     else:
         print(col.Fore.RED + "Couldn't load python-logo.png")
         print(col.Style.RESET_ALL)
