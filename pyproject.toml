@@ -1,0 +1,89 @@
+# Based on Python Sample Project https://github.com/pypa/sampleproject
+# Please see the above link for more detailed descriptions of what this file does
+# Setuptools: https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+
+[build-system]
+# A list of packages that are needed to build your package:
+requires = ["setuptools"]  # REQUIRED if [build-system] table is used
+# The name of the Python object that frontends will use to perform the build:
+build-backend = "setuptools.build_meta"  # If not defined, then legacy behavior can happen.
+
+
+[project]
+name = "flatpak-python-template"  # REQUIRED
+version = "1.0.0"  # REQUIRED
+description = "A sample Python project"
+readme = "README.md"
+
+# Specify which Python versions you support
+requires-python = ">=3.8"
+
+license = {file = "LICENSE"}
+keywords = ["sample", "development"]
+
+# This should be your name or the name of the organization who originally
+# authored the project, and a valid email address corresponding to the name
+# listed.
+authors = [
+  {name = "Riftr", email = "9170186+Riftr@users.noreply.github.com" }
+]
+
+#maintainers = [
+#  {name = "A. Great Maintainer", email = "maintainer@example.com" }
+#]
+
+# Classifiers help users find your project by categorizing it.
+#
+# For a list of valid classifiers, see https://pypi.org/classifiers/
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 3 - Alpha",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Pick your license as you wish
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here. In particular, ensure
+  # that you indicate you support Python 3. These classifiers are *not*
+  # checked by "pip install". See instead "requires-python" key in this file.
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+# This field lists other packages that your project depends on to run when installed.
+dependencies = [
+  "colorama",
+  "pillow"
+]
+
+# List additional groups of dependencies here (e.g. development)
+#dev = ["check-manifest"]
+#test = ["coverage"]
+
+# List URLs that are relevant to your project
+[project.urls]
+"Homepage" = "https://github.com/Riftr/flatpak-python-template"
+"Bug Reports" = "https://github.com/Riftr/flatpak-python-template/issues"
+#"Funding" = "https://donate.pypi.org"
+#"Say Thanks!" = "http://saythanks.io/to/example"
+"Source" = "https://github.com/Riftr/flatpak-python-template"
+
+# The following would provide a command line executable called `runmyapp`
+# which executes the function `main` from this package when invoked.
+[project.scripts]
+example-app = "sampleapp:main"  # main()
+
+# Include the "resources" directory within the sampleapp directory
+[tool.setuptools.package-data]
+resources = ['resources/*']
