@@ -12,8 +12,8 @@ application lives. Then you need to update ***run.sh*** to match the entry point
 
 Included is an example of copying a resource directory into the Flatpak if needed.
 
-To generate your Python dependency list of sources for the YML file, use flatpak-getreq.sh. This will 
-generate a python3-requirements.yaml file which you can copy the sources: from into the YML file. Don't 
-forget to rename this file to match your application.
+To generate your Python dependency list of sources for the YML file, use flatpak-getreq.sh after updating your
+requirements.txt file. This will generate a python3-requirements.yaml file which you can copy the 
+sources: from into the YML file. Don't forget to rename this file to match your application.
 
-To build it use flatpak-build.sh
+To build it use *flatpak-build.sh*. Make sure you update this script to match your files.
