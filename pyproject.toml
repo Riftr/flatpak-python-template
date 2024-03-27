@@ -11,7 +11,7 @@ build-backend = "setuptools.build_meta"  # If not defined, then legacy behavior 
 
 [project]
 name = "flatpak-python-template"  # REQUIRED
-version = "1.0.0"  # REQUIRED
+version = "1.0"  # REQUIRED
 description = "A sample Python project"
 readme = "README.md"
 
@@ -84,6 +84,6 @@ dependencies = [
 [project.scripts]
 example-app = "sampleapp:main"  # main()
 
-# Include the "resources" directory within the sampleapp directory
+# Include the "resources" directory within the my_sample_app directory
 [tool.setuptools.package-data]
 resources = ['resources/*']
